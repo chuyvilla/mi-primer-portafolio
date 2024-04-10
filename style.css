@@ -1,0 +1,217 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #d4d0c7;
+    color: #333;
+}
+
+.tudo {
+    max-width: 1200px;
+    margin: 0 auto; /* Esto centra todo el contenido horizontalmente */
+    padding: 0 20px;
+}
+
+/* Estilos del menú */
+.menu {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+}
+
+.menu__header img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.menu__title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu nav {
+    margin-top: 20px;
+}
+
+.menu__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu__list__item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.menu__list__item::before {
+    content: "\2022"; /* Código Unicode del punto */
+    color: #333; /* Color del punto */
+    font-size: 14px; /* Tamaño del punto */
+    margin-right: 8px; /* Espacio entre el punto y el texto */
+}
+
+.menu__list__item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Estilos del título */
+.title {
+    margin-top: 30px;
+    text-align: center; /* Esto centra el contenido del título */
+}
+
+.title__div {
+    display: flex;
+    align-items: center;
+}
+
+.title__profile {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.title__container {
+    flex-grow: 1;
+}
+
+.title__bio {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.title__subsection {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.title__network {
+    list-style-type: none;
+    display: flex;
+}
+
+.title__network__item {
+    margin-right: 10px;
+}
+
+.title__network__item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Estilos de las secciones */
+.about,
+.skills,
+.hobbies,
+.academic,
+.experience,
+.formcontato,
+.footer {
+    margin-top: 30px;
+    text-align: center; /* Esto centra el contenido de las secciones */
+}
+
+.about__title,
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title,
+.formcontato__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Otros estilos */
+img {
+    max-width: 100%;
+}
+
+/* Media queries para hacer el diseño responsivo */
+@media screen and (max-width: 768px) {
+    .menu {
+        padding: 10px;
+    }
+
+    .menu__header img {
+        width: 30px;
+    }
+
+    .menu__title {
+        font-size: 18px;
+    }
+
+    .menu__list__item a {
+        font-size: 16px;
+    }
+
+    .title__profile {
+        width: 120px;
+    }
+
+    .title__bio {
+        font-size: 20px;
+    }
+
+    .title__subsection {
+        font-size: 16px;
+    }
+
+    .title__network__item a {
+        font-size: 14px;
+    }
+
+    .about__title,
+    .skills__title,
+    .hobbies__title,
+    .academic__title,
+    .experience__section__title,
+    .formcontato__title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu__list__item a {
+        font-size: 14px;
+    }
+
+    .title__profile {
+        width: 100px;
+    }
+
+    .title__bio {
+        font-size: 18px;
+    }
+
+    .title__subsection {
+        font-size: 14px;
+    }
+
+    .title__network__item a {
+        font-size: 12px;
+    }
+
+    .about__title,
+    .skills__title,
+    .hobbies__title,
+    .academic__title,
+    .experience__section__title,
+    .formcontato__title {
+        font-size: 18px;
+    }
+}
