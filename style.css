@@ -268,3 +268,61 @@ img {
     }
 }
 
+.skills__line,
+.hobbies__line {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 100px; /* Ajusta la altura según sea necesario */
+}
+
+.skills__line::before,
+.skills__line::after,
+.hobbies__line::before,
+.hobbies__line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* Ajusta el ancho del espacio entre los elementos */
+  background: linear-gradient(to right, rgb(175, 170, 171), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.skills__line::after,
+.hobbies__line::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.skills__box,
+.hobbies__box {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  margin: 0 50px; /* Aumenta el margen para más espacio entre los elementos */
+}
+
+.skills__line > * {
+  animation: scroll 15s linear infinite;
+}
+
+.hobbies__line > * {
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.skills__line:hover,
+.hobbies__line:hover {
+  animation-play-state: paused;
+}
